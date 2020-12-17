@@ -1,0 +1,9 @@
+<h1><%= @blogger.name %></h1>
+<ul>
+  <% @blogger.posts.each do |post| %>
+    <li>
+      <%= post.likes.count %>
+      <%= link_to post.likes.max, post_path(post) %>
+    </li>
+  <% end %>
+</ul>
